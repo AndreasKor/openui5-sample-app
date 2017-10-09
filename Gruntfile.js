@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
 		connect: {
 			options: {
-				port: 8080,
+				port: 8051,
 				hostname: '*'
 			},
 			src: {},
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
 				basePath: 'webapp',
 				frameworks: ['openui5', 'qunit'],
 				openui5: {
-					path: 'http://localhost:8080/resources/sap-ui-core.js'
+					path: 'http://localhost:8051/resources/sap-ui-core.js'
 				},
 				client: {
 					openui5: {
@@ -113,8 +113,8 @@ module.exports = function(grunt) {
 					{ pattern: '**',                 included: false, served: true, watched: true }
 				],
 				proxies: {
-					'/base/resources': 'http://localhost:8080/resources',
-					'/base/test-resources': 'http://localhost:8080/test-resources',
+					'/base/resources': 'http://localhost:8051/resources',
+					'/base/test-resources': 'http://localhost:8051/test-resources',
 				},
 				reporters: ['progress'],
 				port: 9876,
