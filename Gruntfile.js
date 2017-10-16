@@ -147,7 +147,11 @@ module.exports = function(grunt) {
 						}
 					}
 				},
-				reporters: ['progress', 'coverage'],
+				reporters: ['progress', 'coverage', 'dots', 'junit'],
+				junitReporter : {
+					outputFile : '../../test_out/unit.xml',
+					suite : 'unit'
+				}
 			},
 			watch: {
 				client: {
